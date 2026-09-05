@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área de Trabalho - Portfólio Windows 2000</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="tela-inicializacao">
+
+    <div class="login-topo"></div>
+
+    <div class="login-conteudo">
+
+        <div class="login-esquerda">
+            <div class="windows-logo">
+              <img src="windows_logo.png" alt="Windows">
+            </div>
+
+
+            <p>Para começar, clique no seu nome de usuário</p>
+        </div>
+
+
+        <div class="login-direita">
+
+            <button id="botao-iniciar" class="usuario">
+
+                <div class="icone-usuario">
+                    👤
+                </div>
+
+                <div class="nome-usuario">
+                    <strong>Meu Portfólio</strong>
+                </div>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="login-rodape">
+
+        <button class="desligar">
+            ⏻ &nbsp; Desligar computador
+        </button>
+
+        <p>
+            Depois de fazer login, você poderá acessar<br>
+            seu portfólio e conhecer meus projetos.
+        </p>
+
+    </div>
+
+</div>
+
+  <!-- ÍCONES NA ÁREA DE TRABALHO -->
+  <div class="desktop-icons">
+    <div class="icon-item" onclick="openWindow('win-about')">
+      <div class="icon-img">📝</div>
+      <span class="icon-title">Sobre_Mim.txt</span>
+    </div>
+    <div class="icon-item" onclick="openWindow('win-projects')">
+      <div class="icon-img">📁</div>
+      <span class="icon-title">Projetos.exe</span>
+    </div>
+    <div class="icon-item" onclick="openWindow('win-skills')">
+      <div class="icon-img">⚙️</div>
+      <span class="icon-title">Habilidades.sys</span>
+    </div>
+    <div class="icon-item" onclick="openWindow('win-contact')">
+      <div class="icon-img">✉️</div>
+      <span class="icon-title">Contato.msg</span>
+    </div>
+    <div class="icon-item" onclick="openWindow('win-cmd')">
+      <div class="icon-img">💻</div>
+      <span class="icon-title">Terminal.cmd</span>
+    </div>
+  </div>
+
+  <!-- JANELA 1: SOBRE MIM (Bloco de Notas) -->
+  <div id="win-about" class="window outset active" style="top: 100px; left: 425px; width: 480px;">
+    <div class="title-bar" onmousedown="dragWindow(event, 'win-about')">
+      <div class="title-bar-text"><span>📝</span> Sobre_Mim.txt - Bloco de Notas</div>
+      <div class="title-bar-controls">
+        <button class="outset" onclick="minimizeWindow('win-about')">_</button>
+        <button class="outset" onclick="maximizeWindow('win-about')">□</button>
+        <button class="outset" onclick="closeWindow('win-about')">X</button>
+      </div>
+    </div>
+    <div class="menu-bar">
+      <span class="menu-item">Arquivo</span>
+      <span class="menu-item">Editar</span>
+      <span class="menu-item">Formatar</span>
+      <span class="menu-item">Ajuda</span>
+    </div>
+    <div class="window-body">
+      <div class="inset" style="padding: 12px; background: white; min-height: 250px;">
+        <h2 style="font-size: 14px; margin-bottom: 8px; color: #000080;">Oie, eu sou o Galê!</h2>
+        <p style="margin-bottom: 10px; line-height: 1.4;">
+          Tenho 21 anos e estou no segundo período de Sistemas da Informação na PUCPR, procuro estágios na área de Desenvolvimento com o objetivo de aprender mais sobre o mercado de trabalho na área da TI. 
+        </p>
+        <h3 style="font-weight: bold; margin-bottom: 4px;"> Minha Trajetória:</h3>
+        <p style="margin-bottom: 10px; line-height: 1.4;">
+          Hoje eu sou concursado com Agente de Pesquisa e Mapeamento no IBGE, mas desde cedo tive interesse por programação e design, levando ao curso que atualmente eu estudo. Fiz um curso técnico em Edificações integrado ao ensino médio, o que me proporcionou mais experiência com estágios e uma facilidade maior com contas.
+        </p>
+        <h3 style="font-weight: bold; margin-bottom: 4px;"> Interesses & Hobbies:</h3>
+        <ul style="margin-left: 20px; margin-bottom: 10px; line-height: 1.4;">
+          <li>Jogos, principalmente os retrôs</li>
+          <li>Costura, crochê e bordado</li>
+          <li>Tecnologia</li>
+          <li>Tocar guitarra</li>
+          <li>Fazer e costurar cosplay</li>
+        </ul>
+        <p style="color: #666; font-style: italic;">
+          feito com ódio e muito código.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JANELA 2: MEUS PROJETOS (Gerenciador de Arquivos) -->
+  <div id="win-projects" class="window outset" style="top: 80px; left: 500px; width: 560px;">
+    <div class="title-bar" onmousedown="dragWindow(event, 'win-projects')">
+      <div class="title-bar-text"><span>📁</span> C:\Meus_Projetos</div>
+      <div class="title-bar-controls">
+        <button class="outset" onclick="minimizeWindow('win-projects')">_</button>
+        <button class="outset" onclick="maximizeWindow('win-projects')">□</button>
+        <button class="outset" onclick="closeWindow('win-projects')">X</button>
+      </div>
+    </div>
+    <div class="menu-bar">
+      <span class="menu-item">Exibir</span>
+      <span class="menu-item">Ir Para</span>
+      <span class="menu-item">Favoritos</span>
+    </div>
+    <div class="window-body">
+      <div class="projects-grid">
+        
+        <!-- Projeto 1 -->
+        <div class="project-card inset">
+          <div>
+            <div class="project-title">RPG de Turno</div>
+            <p style="margin: 6px 0; color: #333;">Sistema estilo jogo de RPG de turno programado em linguagem Java.</p>
+            <div class="tags">
+              <span class="tag">Java</span>
+            </div>
+          </div>
+          <div style="margin-top: 8px; display: flex; gap: 4px;">
+            <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="project-card inset">
+          <div>
+            <div class="project-title"> Dashboard de Gestão</div>
+            <p style="margin: 6px 0; color: #333;">Painel administrativo com gráficos em tempo real e relatórios exportáveis em PDF.</p>
+            <div class="tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind</span>
+            </div>
+          </div>
+          <div style="margin-top: 8px; display: flex; gap: 4px;">
+            <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="project-card inset">
+          <div>
+            <div class="project-title"> PAC-MAN em Python</div>
+            <p style="margin: 6px 0; color: #333;">Implementação do clássico jogo PAC-MAN em linguagem Python.</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pygame</span>
+            </div>
+          </div>
+          <div style="margin-top: 8px; display: flex; gap: 4px;">
+            <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="project-card inset">
+          <div>
+            <div class="project-title"> Projeto </div>
+            <p style="margin: 6px 0; color: #333;">O seu pode estar aqui!</p>
+            <div class="tags">
+            </div>
+          </div>
+          <div style="margin-top: 8px; display: flex; gap: 4px;">
+            <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JANELA 3: HABILIDADES (Propriedades do Sistema com Abas) -->
+  <div id="win-skills" class="window outset" style="top: 120px; left: 350px; width: 420px;">
+    <div class="title-bar" onmousedown="dragWindow(event, 'win-skills')">
+      <div class="title-bar-text"><span>⚙️</span> Propriedades do Sistema - Habilidades</div>
+      <div class="title-bar-controls">
+        <button class="outset" onclick="minimizeWindow('win-skills')">_</button>
+        <button class="outset" onclick="closeWindow('win-skills')">X</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <!-- Abas -->
+      <div class="tabs-header">
+        <button class="tab-btn active" onclick="switchTab(event, 'tab-frontend')">Hard Skills</button>
+        <button class="tab-btn" onclick="switchTab(event, 'tab-backend')">Soft Skills</button>
+      </div>
+      
+      <div class="inset" style="background: var(--win-gray);">
+        <!-- Aba 1 -->
+        <div id="tab-frontend" class="tab-content active">
+          <ul style="list-style: square; margin-left: 18px; line-height: 1.6;">
+            <li><b>HTML & CSS</b></li>
+            <li><b>JavaScript</b></li>
+            <li><b>Python e Java</b></li>
+            <li><b>MySQL</b></li>
+            <li><b>Pacote Office</b></li>
+            <li><b>Inglês avançado</b></li>
+            <li><b>Git, GitHub e GitLab</b></li>
+          </ul>
+        </div>
+        <!-- Aba 2 -->
+        <div id="tab-backend" class="tab-content">
+          <ul style="list-style: square; margin-left: 18px; line-height: 1.6;">
+            <li><b>Criatividade e inovação</b></li>
+            <li><b>Resolução de problemas</b></li>
+            <li><b>Organização e planejamento</b></li>
+            <li><b>Relacionamento interpessoal</b></li>
+            <li><b>Trabalho em equipe</b></li>
+            <li><b>Proatividade</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align: right; margin-top: 10px;">
+        <button class="btn" onclick="closeWindow('win-skills')">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JANELA 4: CONTATO -->
+  <div id="win-contact" class="window outset" style="top: 80px; left: 400px; width: 380px;">
+    <div class="title-bar" onmousedown="dragWindow(event, 'win-contact')">
+      <div class="title-bar-text"><span>✉️</span> Novo E-mail - Mensagem</div>
+      <div class="title-bar-controls">
+        <button class="outset" onclick="minimizeWindow('win-contact')">_</button>
+        <button class="outset" onclick="closeWindow('win-contact')">X</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="form-group">
+        <label>Para:</label>
+        <input type="text" class="inset" value="galedrevenancio@gmail.com" readonly>
+      </div>
+      <div class="form-group">
+        <label>De (Seu E-mail):</label>
+        <input type="email" class="inset" placeholder="seu-email@exemplo.com">
+      </div>
+      <div class="form-group">
+        <label>Assunto:</label>
+        <input type="text" class="inset" placeholder="Oportunidade / Dúvida / Freelance">
+      </div>
+      <div class="form-group">
+        <label>Mensagem:</label>
+        <textarea class="inset" rows="5" placeholder="escreva sua mensagem aqui... ex: Parabéns Galê, você está contratado!"></textarea>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+        <div>
+          <a href="https://linkedin.com" target="_blank" class="btn">LinkedIn</a>
+          <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+        </div>
+        <button class="btn" onclick="alert('Mensagem enviada com sucesso!')">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JANELA 5: TERMINAL CMD -->
+  <div id="win-cmd" class="window outset" style="top: 100px; left: 300px; width: 450px;">
+    <div class="title-bar" onmousedown="dragWindow(event, 'win-cmd')">
+      <div class="title-bar-text"><span>💻</span> Prompt de Comando</div>
+      <div class="title-bar-controls">
+        <button class="outset" onclick="minimizeWindow('win-cmd')">_</button>
+        <button class="outset" onclick="closeWindow('win-cmd')">X</button>
+      </div>
+    </div>
+    <div class="window-body cmd-body inset">
+      <div class="cmd-line">Microsoft(R) Windows XP [Versão 5.00.2195]</div>
+      <div class="cmd-line">(C) Copyright 2001-2009 Microsoft Corp.</div>
+      <br>
+      <div class="cmd-line">C:\USERS\DEV> systeminfo</div>
+      <div class="cmd-line">OS Name: Portfolio Windows XP Edition</div>
+      <div class="cmd-line">Status: Disponível para Contratação</div>
+      <br>
+      <div class="cmd-line">C:\USERS\DEV> <span id="cmd-cursor">_</span></div>
+    </div>
+  </div>
+
+  <!-- MENU INICIAR -->
+  <div id="start-menu" class="start-menu outset">
+    <div class="start-sidebar">Windows XP</div>
+    <div class="start-options">
+      <div class="start-option" onclick="openWindow('win-about'); toggleStartMenu();">
+        <span>📝</span> Sobre Mim
+      </div>
+      <div class="start-option" onclick="openWindow('win-projects'); toggleStartMenu();">
+        <span>📁</span> Meus Projetos
+      </div>
+      <div class="start-option" onclick="openWindow('win-skills'); toggleStartMenu();">
+        <span>⚙️</span> Habilidades
+      </div>
+      <div class="start-option" onclick="openWindow('win-contact'); toggleStartMenu();">
+        <span>✉️</span> Contato
+      </div>
+      <div class="start-option" onclick="openWindow('win-cmd'); toggleStartMenu();">
+        <span>💻</span> Prompt de Comando
+      </div>
+      <div class="start-divider"></div>
+      <div class="start-option" onclick="alert('Sistema pronto para ser explorado!')">
+        <span>🔒</span> Desligar...
+      </div>
+    </div>
+  </div>
+
+  <!-- BARRA DE TAREFAS -->
+  <div class="taskbar">
+    <div class="start-container">
+      <button class="btn start-btn" onclick="toggleStartMenu()">
+        <span style="color: #000080; font-style: italic; font-weight: 900;">田</span> Iniciar
+      </button>
+    </div>
+
+    <!-- BOTÕES DAS JANELAS NA BARRA -->
+    <div id="task-items" class="task-items">
+      <!-- Gerado dinamicamente via JS -->
+    </div>
+
+    <!-- RELÓGIO -->
+    <div class="system-tray inset">
+      <span>🔊</span>
+      <span id="clock">12:00</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
