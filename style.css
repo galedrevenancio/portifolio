@@ -1,0 +1,603 @@
+  /* RESET & ESTILOS GERAIS */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Tahoma", "Segoe UI", Geneva, sans-serif;
+      font-size: 11px;
+      user-select: none;
+    }
+
+    :root {
+      --win-teal: #008080;
+      --win-gray: #c0c0c0;
+      --win-light: #ffffff;
+      --win-dark: #808080;
+      --win-black: #000000;
+      --win-blue-active: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+      --win-blue-inactive: linear-gradient(90deg, #808080 0%, #b5b5b5 100%);
+    }
+
+    body {
+      background-image: url("fundo.jpg");
+      background-size: 100% auto;
+      background-position: center;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* BORDAS CLÁSSICAS 3D */
+    .outset {
+      border: 2px solid;
+      border-color: var(--win-light) var(--win-dark) var(--win-dark) var(--win-light);
+      background-color: var(--win-gray);
+    }
+
+    .inset {
+      border: 2px solid;
+      border-color: var(--win-dark) var(--win-light) var(--win-light) var(--win-dark);
+      background-color: var(--win-light);
+    }
+
+    /* ÍCONES DA ÁREA DE TRABALHO */
+    .desktop-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .icon-item {
+      width: 75px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      color: white;
+      text-shadow: 1px 1px 1px black;
+    }
+
+    .icon-item:hover span {
+      background-color: #000080;
+    }
+
+    .icon-img {
+      font-size: 32px;
+      margin-bottom: 4px;
+    }
+
+    .icon-title {
+      padding: 2px 4px;
+      word-break: break-word;
+    }
+
+    /* SISTEMA DE JANELAS */
+    .window {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      min-width: 320px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .window.active {
+      z-index: 100 !important;
+    }
+
+    .title-bar {
+      background: var(--win-blue-inactive);
+      height: 20px;
+      padding: 2px 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #d6d6d6;
+      font-weight: bold;
+      cursor: move;
+    }
+
+    .window.active .title-bar {
+      background: var(--win-blue-active);
+      color: white;
+    }
+
+    .title-bar-text {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .title-bar-controls {
+      display: flex;
+      gap: 2px;
+    }
+
+    .title-bar-controls button {
+      width: 16px;
+      height: 14px;
+      font-size: 9px;
+      font-weight: bold;
+      line-height: 10px;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .menu-bar {
+      display: flex;
+      gap: 12px;
+      padding: 2px 6px;
+      border-bottom: 1px solid var(--win-dark);
+      background: var(--win-gray);
+    }
+
+    .menu-item {
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      background-color: #000080;
+      color: white;
+    }
+
+    .window-body {
+      padding: 10px;
+      flex-grow: 1;
+      overflow-y: auto;
+      background: var(--win-gray);
+      color: var(--win-black);
+      user-select: text;
+    }
+
+    /* BOTÕES */
+    .btn {
+      padding: 4px 12px;
+      cursor: pointer;
+      font-weight: bold;
+      background: var(--win-gray);
+      border: 2px solid;
+      border-color: var(--win-light) var(--win-dark) var(--win-dark) var(--win-light);
+      text-decoration: none;
+      color: black;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      user-select: none;
+    }
+
+    .btn:active {
+      border-color: var(--win-dark) var(--win-light) var(--win-light) var(--win-dark);
+      padding: 5px 11px 3px 13px;
+    }
+
+    /* ABA DE NAVEGAÇÃO INTERNA (PROPRIEDADES DO SISTEMA) */
+    .tabs-header {
+      display: flex;
+      gap: 2px;
+      margin-bottom: -2px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tab-btn {
+      padding: 4px 10px;
+      background: var(--win-gray);
+      border: 2px solid;
+      border-color: var(--win-light) var(--win-dark) transparent var(--win-light);
+      cursor: pointer;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
+    .tab-btn.active {
+      font-weight: bold;
+      background: var(--win-gray);
+      border-bottom: 2px solid var(--win-gray);
+      padding-bottom: 5px;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 12px;
+      min-height: 180px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* CARDS DE PROJETOS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .project-card {
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+      background: white;
+    }
+
+    .project-title {
+      font-weight: bold;
+      font-size: 12px;
+      color: #000080;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #e0e0e0;
+      border: 1px solid #a0a0a0;
+      padding: 1px 4px;
+      font-size: 9px;
+    }
+
+    /* TERMINAL CMD */
+    .cmd-body {
+      background: black !important;
+      color: #00ff00 !important;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 12px;
+      height: 220px;
+    }
+
+    .cmd-line {
+      margin-bottom: 4px;
+    }
+
+    /* BARRA DE TAREFAS */
+    .taskbar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30px;
+      background-color: var(--win-gray);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2px 4px;
+      border-top: 2px solid var(--win-light);
+      z-index: 99999;
+    }
+
+    .start-container {
+      position: relative;
+    }
+
+    .start-btn {
+      font-weight: bold;
+      height: 24px;
+      padding: 2px 8px;
+    }
+
+    .task-items {
+      display: flex;
+      gap: 4px;
+      flex-grow: 1;
+      margin: 0 8px;
+      overflow-x: auto;
+    }
+
+    .task-item {
+      height: 22px;
+      width: 140px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 6px;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .task-item.active {
+      border-color: var(--win-dark) var(--win-light) var(--win-light) var(--win-dark);
+      background-color: #e6e6e6;
+      font-weight: bold;
+    }
+
+    .system-tray {
+      padding: 2px 8px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* MENU INICIAR */
+    .start-menu {
+      position: absolute;
+      bottom: 28px;
+      left: 0;
+      width: 200px;
+      display: none;
+      flex-direction: row;
+      z-index: 100000;
+    }
+
+    .start-menu.show {
+      display: flex;
+    }
+
+    .start-sidebar {
+      width: 28px;
+      background: linear-gradient(0deg, #000080, #1084d0);
+      color: white;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      padding: 8px 4px;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .start-options {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 2px;
+    }
+
+    .start-option {
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .start-option:hover {
+      background-color: #000080;
+      color: white;
+    }
+
+    .start-divider {
+      height: 1px;
+      border-top: 1px solid var(--win-dark);
+      border-bottom: 1px solid var(--win-light);
+      margin: 2px 0;
+    }
+
+    /* FORMULÁRIO DE CONTATO */
+    .form-group {
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .form-group input, .form-group textarea {
+      padding: 4px;
+      outline: none;
+    }
+    #tela-inicial {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #008080;
+    z-index: 9999;
+}
+
+/* ==============================
+   TELA DE LOGIN
+   ============================== */
+
+#tela-inicializacao {
+    position: fixed;
+    inset: 0;
+
+    background: #3f7ff0;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 999999;
+
+    font-family: Tahoma, "Segoe UI", sans-serif;
+    color: white;
+}
+
+
+/* TOPO */
+
+.login-topo {
+    height: 50px;
+
+    background: #1238b8;
+
+    border-bottom: 2px solid #6ea0ff;
+}
+
+
+/* CONTEÚDO */
+
+.login-conteudo {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 80px;
+}
+
+
+/* LADO ESQUERDO */
+
+.login-esquerda {
+    width: 380px;
+
+    text-align: right;
+
+    padding-right: 40px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.windows-logo img {
+    width: 200px;
+    height: auto;
+}
+
+
+.login-esquerda h1 {
+    font-size: 28px;
+
+    margin-bottom: 25px;
+
+    font-weight: normal;
+}
+
+
+.login-esquerda p {
+    font-size: 14px;
+
+    margin: 0;
+
+    color: #ffffff;
+}
+
+
+/* LADO DIREITO */
+
+.login-direita {
+    width: 320px;
+}
+
+
+.usuario {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 12px;
+
+    border: none;
+
+    background: linear-gradient(
+        to right,
+        rgba(30, 90, 200, 0.4),
+        rgba(20, 70, 170, 0.8)
+    );
+
+    color: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    border-radius: 4px;
+}
+
+
+.usuario:hover {
+    background: linear-gradient(
+        to right,
+        rgba(60, 120, 230, 0.7),
+        rgba(30, 90, 200, 0.9)
+    );
+}
+
+
+/* ÍCONE DO USUÁRIO */
+
+.icone-usuario {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border: 2px solid #ddd;
+
+    border-radius: 3px;
+
+    font-size: 30px;
+
+    margin-right: 12px;
+}
+
+
+.nome-usuario {
+    font-size: 16px;
+}
+
+
+/* RODAPÉ */
+
+.login-rodape {
+    height: 62px;
+
+    background: #1536bb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 35px;
+}
+
+
+.desligar {
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-family: Tahoma, sans-serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.desligar:hover {
+    text-decoration: underline;
+}
+
+
+.login-rodape p {
+    font-size: 10px;
+
+    line-height: 14px;
+
+    margin-right: 30px;
+
+    color: #e0e0e0;
+}
