@@ -68,10 +68,19 @@
       background-color: #000080;
     }
 
-    .icon-img {
-      font-size: 32px;
-      margin-bottom: 4px;
-    }
+ .icon-img {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.icon-img {
+    font-size: 28px;
+    width: 40px;
+    height: 35px;
+    margin: 0 auto 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
     .icon-title {
       padding: 2px 4px;
@@ -601,3 +610,66 @@
 
     color: #e0e0e0;
 }
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    padding: 10px;
+}
+.skill-category {
+    border: 1px solid #888;
+    background: #d4d0c8;
+
+    padding: 10px;
+}
+.skill-category h3 {
+    font-size: 12px;
+
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #888;
+
+    padding-bottom: 4px;
+}
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill span {
+    display: block;
+
+    font-size: 11px;
+
+    margin-bottom: 3px;
+}
+.barra {
+    width: 100%;
+    height: 12px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.nivel {
+    height: 100%;
+
+    background: #316ac5;
+}
+.nivel-basico {
+    width: 40%;
+}
+
+.nivel-intermediario {
+    width: 65%;
+}
+
+.nivel-avancado {
+    width: 85%;
+}
+

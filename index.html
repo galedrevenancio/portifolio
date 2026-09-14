@@ -19,7 +19,7 @@
             </div>
 
 
-            <p>Para começar, clique no seu nome de usuário</p>
+            <p>Para começar, clique no nome de usuário</p>
         </div>
 
 
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="nome-usuario">
-                    <strong>Meu Portfólio</strong>
+                    <strong>Portifólio do Galê S2 </strong>
                 </div>
 
             </button>
@@ -45,12 +45,12 @@
     <div class="login-rodape">
 
         <button class="desligar">
-            ⏻ &nbsp; Desligar computador
+            ⏻ &nbsp; Desligar
         </button>
 
         <p>
             Depois de fazer login, você poderá acessar<br>
-            seu portfólio e conhecer meus projetos.
+            o portfólio e conhecer meus projetos.
         </p>
 
     </div>
@@ -59,26 +59,39 @@
 
   <!-- ÍCONES NA ÁREA DE TRABALHO -->
   <div class="desktop-icons">
+
     <div class="icon-item" onclick="openWindow('win-about')">
-      <div class="icon-img">📝</div>
-      <span class="icon-title">Sobre_Mim.txt</span>
+        <div class="icon-img">📝</div>
+        <span class="icon-title">Sobre_Mim.txt</span>
     </div>
+
     <div class="icon-item" onclick="openWindow('win-projects')">
-      <div class="icon-img">📁</div>
-      <span class="icon-title">Projetos.exe</span>
+        <div class="icon-img">📁</div>
+        <span class="icon-title">Projetos.exe</span>
     </div>
+
     <div class="icon-item" onclick="openWindow('win-skills')">
-      <div class="icon-img">⚙️</div>
-      <span class="icon-title">Habilidades.sys</span>
+        <div class="icon-img">⚙️</div>
+        <span class="icon-title">Habilidades.sys</span>
     </div>
+
     <div class="icon-item" onclick="openWindow('win-contact')">
-      <div class="icon-img">✉️</div>
-      <span class="icon-title">Contato.msg</span>
+        <div class="icon-img">✉️</div>
+        <span class="icon-title">Contato.msg</span>
     </div>
+
     <div class="icon-item" onclick="openWindow('win-cmd')">
-      <div class="icon-img">💻</div>
-      <span class="icon-title">Terminal.cmd</span>
+        <div class="icon-img">💻</div>
+        <span class="icon-title">Terminal.cmd</span>
     </div>
+    <div class="icon-item" onclick="window.open('curriculo_gale.pdf', '_blank')">
+        <div class="icon-img">📄</div>
+        <span class="icon-title">Curriculo.pdf</span>
+    </div>
+    <a href="https://galedrevenancio.github.io/criacoes/" target="_blank" class="icon-item">
+      <img src="internet_explorer.png" alt="Internet Explorer" style="width: 30px;">
+      <span class="icon-title">criacoesdogale.net</span>
+    </a>
   </div>
 
   <!-- JANELA 1: SOBRE MIM (Bloco de Notas) -->
@@ -100,20 +113,23 @@
     <div class="window-body">
       <div class="inset" style="padding: 12px; background: white; min-height: 250px;">
         <h2 style="font-size: 14px; margin-bottom: 8px; color: #000080;">Oie, eu sou o Galê!</h2>
-        <p style="margin-bottom: 10px; line-height: 1.4;">
-          Tenho 21 anos e estou no segundo período de Sistemas da Informação na PUCPR, procuro estágios na área de Desenvolvimento com o objetivo de aprender mais sobre o mercado de trabalho na área da TI. 
+        <p style="margin-bottom: 10px; line-height: 1.4; text-align: justify;">
+          Tenho 21 anos e estou no segundo período de Sistemas da Informação na PUCPR, sou bastante criativo e adoro arte! 
+          Tenho muito interesse pela área de design e programação, por isso procuro um estágio para adquirir mais experiência nessas áreas.
         </p>
         <h3 style="font-weight: bold; margin-bottom: 4px;"> Minha Trajetória:</h3>
-        <p style="margin-bottom: 10px; line-height: 1.4;">
-          Hoje eu sou concursado com Agente de Pesquisa e Mapeamento no IBGE, mas desde cedo tive interesse por programação e design, levando ao curso que atualmente eu estudo. Fiz um curso técnico em Edificações integrado ao ensino médio, o que me proporcionou mais experiência com estágios e uma facilidade maior com contas.
+        <p style="margin-bottom: 10px; line-height: 1.4; text-align: justify;">
+          Desde 2024 atuo como Agente de Pesquisa e Mapeamento no IBGE, onde desenvolvo, remotamente, mapeamento de áreas agropecuárias no Brasil. 
+          Possuo formação técnica em Edificações integrada ao ensino médio (conclusão em 2023), o que contribuiu para fortalecer meu raciocínio lógico, disciplina e capacidade de lidar com projetos.
         </p>
         <h3 style="font-weight: bold; margin-bottom: 4px;"> Interesses & Hobbies:</h3>
         <ul style="margin-left: 20px; margin-bottom: 10px; line-height: 1.4;">
-          <li>Jogos, principalmente os retrôs</li>
+          <li>Jogos, principalmente retrô</li>
           <li>Costura, crochê e bordado</li>
           <li>Tecnologia</li>
           <li>Tocar guitarra</li>
-          <li>Fazer e costurar cosplay</li>
+          <li>Fazer cosplay</li>
+          <li>Resolver problemas de lógica</li>
         </ul>
         <p style="color: #666; font-style: italic;">
           feito com ódio e muito código.
@@ -144,29 +160,27 @@
         <div class="project-card inset">
           <div>
             <div class="project-title">RPG de Turno</div>
-            <p style="margin: 6px 0; color: #333;">Sistema estilo jogo de RPG de turno programado em linguagem Java.</p>
+            <p style="margin: 6px 0; color: #333;">Sistema estilo jogo de RPG de turno programado em linguagem Java (ainda não finalizado).</p>
             <div class="tags">
               <span class="tag">Java</span>
             </div>
           </div>
           <div style="margin-top: 8px; display: flex; gap: 4px;">
-            <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+            <a href="https://github.com/galedrevenancio/rpg-de-turno" target="_blank" class="btn">GitHub</a>
           </div>
         </div>
 
         <!-- Projeto 2 -->
         <div class="project-card inset">
           <div>
-            <div class="project-title"> Dashboard de Gestão</div>
-            <p style="margin: 6px 0; color: #333;">Painel administrativo com gráficos em tempo real e relatórios exportáveis em PDF.</p>
+            <div class="project-title">Verificação de números repetidos</div>
+            <p style="margin: 6px 0; color: #333;">Projeto simples usado diariamente no meu trabalho atual, ideal para conferir duplicados em listas com centenas de números.</p>
             <div class="tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">Tailwind</span>
+              <span class="tag">Python</span>
             </div>
           </div>
           <div style="margin-top: 8px; display: flex; gap: 4px;">
-            <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+            <a href="https://github.com/galedrevenancio/N-meros-repetidos-em-Python" target="_blank" class="btn">GitHub</a>
           </div>
         </div>
 
@@ -181,7 +195,7 @@
             </div>
           </div>
           <div style="margin-top: 8px; display: flex; gap: 4px;">
-            <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+            <a href="https://github.com/galedrevenancio/PAC-MAN-em-Python" target="_blank" class="btn">GitHub</a>
           </div>
         </div>
 
@@ -194,7 +208,7 @@
             </div>
           </div>
           <div style="margin-top: 8px; display: flex; gap: 4px;">
-            <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+            <a href="https://github.com/galedrevenancio" target="_blank" class="btn">GitHub</a>
           </div>
         </div>
 
@@ -203,7 +217,7 @@
   </div>
 
   <!-- JANELA 3: HABILIDADES (Propriedades do Sistema com Abas) -->
-  <div id="win-skills" class="window outset" style="top: 120px; left: 350px; width: 420px;">
+  <div id="win-skills" class="window outset" style="top: 30px; left: 500px; width: 420px;">
     <div class="title-bar" onmousedown="dragWindow(event, 'win-skills')">
       <div class="title-bar-text"><span>⚙️</span> Propriedades do Sistema - Habilidades</div>
       <div class="title-bar-controls">
@@ -221,24 +235,102 @@
       <div class="inset" style="background: var(--win-gray);">
         <!-- Aba 1 -->
         <div id="tab-frontend" class="tab-content active">
-          <ul style="list-style: square; margin-left: 18px; line-height: 1.6;">
-            <li><b>HTML & CSS</b></li>
-            <li><b>JavaScript</b></li>
-            <li><b>Python e Java</b></li>
-            <li><b>MySQL</b></li>
-            <li><b>Pacote Office</b></li>
-            <li><b>Inglês avançado</b></li>
-            <li><b>Git, GitHub e GitLab</b></li>
-          </ul>
+          <div class="skills-container">
+
+    <div class="skill-category">
+        <h3>Desenvolvimento Web</h3>
+
+        <div class="skill">
+            <span>HTML & CSS</span>
+            <div class="barra">
+                <div class="nivel nivel-avancado"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="barra">
+                <div class="nivel nivel-basico"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="skill-category">
+        <h3>Programação</h3>
+
+        <div class="skill">
+            <span>Java</span>
+            <div class="barra">
+                <div class="nivel nivel-basico"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span>Python</span>
+            <div class="barra">
+                <div class="nivel nivel-intermediario"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="skill-category">
+        <h3>Banco de Dados</h3>
+
+        <div class="skill">
+            <span>MySQL</span>
+            <div class="barra">
+                <div class="nivel nivel-basico"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="skill-category">
+        <h3>Ferramentas</h3>
+
+        <div class="skill">
+            <span>Git / GitHub / GitLab</span>
+            <div class="barra">
+                <div class="nivel nivel-intermediario"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span>Pacote Office</span>
+            <div class="barra">
+                <div class="nivel nivel-avancado"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="skill-category">
+        <h3>Idiomas</h3>
+
+        <div class="skill">
+            <span>Inglês</span>
+            <div class="barra">
+                <div class="nivel nivel-avancado"></div>
+            </div>
+        </div>
+    </div>
+  </div>
         </div>
         <!-- Aba 2 -->
         <div id="tab-backend" class="tab-content">
           <ul style="list-style: square; margin-left: 18px; line-height: 1.6;">
             <li><b>Criatividade e inovação</b></li>
+            <br>
             <li><b>Resolução de problemas</b></li>
+            <br>
             <li><b>Organização e planejamento</b></li>
+            <br>
             <li><b>Relacionamento interpessoal</b></li>
+            <br>
             <li><b>Trabalho em equipe</b></li>
+            <br>
             <li><b>Proatividade</b></li>
           </ul>
         </div>
@@ -251,41 +343,53 @@
   </div>
 
   <!-- JANELA 4: CONTATO -->
-  <div id="win-contact" class="window outset" style="top: 80px; left: 400px; width: 380px;">
+ <div id="win-contact" class="window outset" style="top: 80px; left: 400px; width: 300px;">
     <div class="title-bar" onmousedown="dragWindow(event, 'win-contact')">
-      <div class="title-bar-text"><span>✉️</span> Novo E-mail - Mensagem</div>
-      <div class="title-bar-controls">
-        <button class="outset" onclick="minimizeWindow('win-contact')">_</button>
-        <button class="outset" onclick="closeWindow('win-contact')">X</button>
-      </div>
-    </div>
-    <div class="window-body">
-      <div class="form-group">
-        <label>Para:</label>
-        <input type="text" class="inset" value="galedrevenancio@gmail.com" readonly>
-      </div>
-      <div class="form-group">
-        <label>De (Seu E-mail):</label>
-        <input type="email" class="inset" placeholder="seu-email@exemplo.com">
-      </div>
-      <div class="form-group">
-        <label>Assunto:</label>
-        <input type="text" class="inset" placeholder="Oportunidade / Dúvida / Freelance">
-      </div>
-      <div class="form-group">
-        <label>Mensagem:</label>
-        <textarea class="inset" rows="5" placeholder="escreva sua mensagem aqui... ex: Parabéns Galê, você está contratado!"></textarea>
-      </div>
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
-        <div>
-          <a href="https://linkedin.com" target="_blank" class="btn">LinkedIn</a>
-          <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+        <div class="title-bar-text">
+            <span>✉️</span> Contato - Galê
         </div>
-        <button class="btn" onclick="alert('Mensagem enviada com sucesso!')">Enviar</button>
-      </div>
-    </div>
-  </div>
 
+        <div class="title-bar-controls">
+            <button class="outset" onclick="minimizeWindow('win-contact')">_</button>
+            <button class="outset" onclick="closeWindow('win-contact')">X</button>
+        </div>
+    </div>
+
+    <div class="window-body">
+
+        <p> Quer entrar em contato comigo?</p>
+
+        <br>
+
+        <div class="form-group">
+            <label>E-mail:</label>
+
+            <p>
+                <strong>galedrevenancio@gmail.com</strong>
+            </p>
+        </div>
+
+        <br>
+
+        <p>Você também pode me encontrar aqui:</p>
+
+        <br>
+
+        <div style="display: flex; gap: 6px;">
+            <a href="https://www.linkedin.com/in/gal%C3%AA-ven%C3%A2ncio-9177b73b6/" target="_blank" class="btn">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/galedrevenancio" target="_blank" class="btn">
+                GitHub
+            </a>   
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=galedrevenancio@gmail.com" target="_blank" class="btn">
+                E-mail
+            </a>
+        </div>
+
+    </div>
+</div>
   <!-- JANELA 5: TERMINAL CMD -->
   <div id="win-cmd" class="window outset" style="top: 100px; left: 300px; width: 450px;">
     <div class="title-bar" onmousedown="dragWindow(event, 'win-cmd')">
@@ -300,8 +404,8 @@
       <div class="cmd-line">(C) Copyright 2001-2009 Microsoft Corp.</div>
       <br>
       <div class="cmd-line">C:\USERS\DEV> systeminfo</div>
-      <div class="cmd-line">OS Name: Portfolio Windows XP Edition</div>
       <div class="cmd-line">Status: Disponível para Contratação</div>
+      <div class="cmd-line">OBS: estrutura base do portfólio feita por IA </div>
       <br>
       <div class="cmd-line">C:\USERS\DEV> <span id="cmd-cursor">_</span></div>
     </div>
